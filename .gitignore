@@ -129,3 +129,4 @@ dmypy.json
 .pyre/
 # no subir entorno virtual
 entorno
+.DS_S:tore
