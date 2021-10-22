@@ -1,0 +1,24 @@
+<h1>Hello World</h1>
+<div style="float: right;">
+    <p style="color:salmon;">Esta imagen es de una ruta externa</p>
+    <img src="{{ urlImgext }}">
+</div>
+<div style="float: right;border-radius: 400px;padding: 10px;">
+    <p style="color:salmon;">Esta imagen es de una ruta local</p>
+    <img src="{{ urlImgLocal }}">
+</div>
+<div style="width: 200em;height: 200em;border-style: solid;margin: 10em;">
+    <h1 style="color: springgreen;">Esta es una de Cálculo</h1>
+    <h2>La suma de 1+2={{ 1+2 }}</h2>
+    <h3>El valor de PI es:{{ calcularPI() }}</h3>
+    <h4>El Area del triángulo es:{{ calcularAreaTriangulo(4,4)}}</h4>
+</div>
+<div style="float: left;">
+    <h1>La figura</h1>
+    <h4>Estamos trabajando con un <span style="color: tomato;">{{ figura.tipo }}</span></h4>
+    <img src="{{ figura.imagen }}">
+    <h4>Su base es: <span style="color: blueviolet;">{{ figura.base }}</span></h4>
+    <h4>Su altura es: <span style="color:chartreuse;">{{ figura.altura }}</span></h4>
+    <h4>Su área es: <span style="color:green;">{{ calcularAreaTriangulo(figura.base,figura.altura) }}</span></h4>
+    <h2>..................FIN..................</h2>
+</div>
