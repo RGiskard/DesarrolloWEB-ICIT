@@ -20,5 +20,8 @@
     <h4>Su base es: <span style="color: blueviolet;">{{ figura.base }}</span></h4>
     <h4>Su altura es: <span style="color:chartreuse;">{{ figura.altura }}</span></h4>
     <h4>Su área es: <span style="color:green;">{{ calcularAreaTriangulo(figura.base,figura.altura) }}</span></h4>
+    <label>Base:</label><input type="number" [(ngModel)]="figura.base">
+    <br>
+    <label>Altura:</label><input type="number" [(ngModel)]="figura.altura">
     <h2>..................FIN..................</h2>
 </div>
