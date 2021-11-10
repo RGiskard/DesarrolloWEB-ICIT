@@ -1,0 +1,25 @@
+<div class="app">
+    <header>
+        <section>
+            <h1>{{ title }}</h1>
+            <h2> {{ version }}</h2>
+        </section>
+        <nav>
+            <ul>
+                <li><a routerLink="/">Inicio</a></li>
+                <li><a routerLink="/informacion">Informacion</a></li>
+                <li><a routerLink="/contacto">Contacto</a></li>
+                <li><a routerLink="/ingresar">Ingresar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <router-outlet></router-outlet>
+    </main>
+
+    <footer>
+        <a href="https://icit.edu.pe/">&copy; 2021 - www.icit.edu.pe</a>
+    </footer>
+
+</div>
