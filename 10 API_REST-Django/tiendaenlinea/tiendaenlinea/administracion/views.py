@@ -2,11 +2,15 @@ from django.shortcuts import render
 
 # Create your views here.
 from rest_framework import status
+from rest_framework import response
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from rest_framework.renderers import JSONRenderer
+from rest_framework.parsers import JSONParser
+from django.http import JsonResponse
 
-from tiendaenlinea.administracion.models import Producto
-from tiendaenlinea.administracion.serializers import ProductoSerializer
+from tiendaenlinea.administracion.models import Producto,Cliente
+from tiendaenlinea.administracion.serializers import ProductoSerializer,ClienteSerializer
 
 
 @api_view(['GET', 'POST'])
@@ -51,3 +55,13 @@ def producto_detalle(request, pk):
     elif request.method == 'DELETE':
         producto.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+@api_view(['GET'])
+def lista_clientes(request):
+    if request.method=='GET':
+        clientes = Cliente.objects.all()
+        serializer = ClienteSerializer(clientes, many=True)
+        return JsonResponse(serializer.data, safe=False)
+        #return response(serializer.data)
+
+
