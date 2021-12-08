@@ -1,21 +1,21 @@
 <div class="container custom-container">
     <div class="col-md-12">
-        <h3 class="mb-3 text-center">Crear Producto</h3>
+        <h3 class="mb-3 text-center">Registrar Producto</h3>
 
         <div class="form-group">
-            <input type="text" [(ngModel)]="productoDetalle.nombre" class="form-control" placeholder="Name">
+            <input type="text" [(ngModel)]="productoDetalle.nombre" class="form-control" placeholder="Nombre del producto">
         </div>
 
         <div class="form-group">
-            <input type="text" [(ngModel)]="productoDetalle.precio" class="form-control" placeholder="Email">
+            <input type="number" [(ngModel)]="productoDetalle.precio" class="form-control" placeholder="Precio">
         </div>
 
         <div class="form-group">
-            <input type="text" [(ngModel)]="productoDetalle.descripcion" class="form-control" placeholder="Phone">
+            <input type="text" [(ngModel)]="productoDetalle.descripcion" class="form-control" placeholder="Descripción ">
         </div>
 
         <div class="form-group">
-            <button class="btn btn-success btn-lg btn-block" (click)="addProducto()">Crear Producto</button>
+            <button class="btn btn-success btn-lg btn-block" (click)="addProducto()">Registrar</button>
         </div>
 
     </div>
