@@ -7,7 +7,7 @@ import { retry, catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class RestApiService {
-  apiURL = 'http://localhost:8080/apiadmin';
+  apiURL = 'http://127.0.0.1:8080/apiadmin';
   constructor(private http: HttpClient) { }
   // Http Options
   httpOptions = {

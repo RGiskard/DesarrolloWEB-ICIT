@@ -105,10 +105,17 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-CORS_ALLOWED_ORIGINS = [
-    "http://127.0.0.1:4200",
+
+CORS_ALLOW_ALL_ORIGINS = True # If this is used then `CORS_ALLOWED_ORIGINS` will not have any effect
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    'http://localhost:4200',
 ]
-CORS_ALLOW_ALL_ORIGINS: bool
+
+#CORS_ALLOWED_ORIGINS = [
+#    "http://127.0.0.1:4200",
+#    "http://localhost:4200",
+#]
 CORS_ALLOW_METHODS = [
     "DELETE",
     "GET",
