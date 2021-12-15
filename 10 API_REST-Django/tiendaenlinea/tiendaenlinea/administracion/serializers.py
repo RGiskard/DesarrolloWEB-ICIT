@@ -6,7 +6,7 @@ from tiendaenlinea.administracion.models import Producto,Cliente
 class ProductoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Producto
-        fields = ('nombre','precio','descripcion',)
+        fields = ('id','nombre','precio','descripcion',)
 
 class ClienteSerializer(serializers.ModelSerializer):
     class Meta:

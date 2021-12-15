@@ -16,7 +16,7 @@ export class RestApiService {
     })
   }
   getProductos(): Observable<Producto> {
-    return this.http.get<Producto>(this.apiURL + '/productos')
+    return this.http.get<Producto>(this.apiURL + '/productos/')
       .pipe(
         retry(1),
         catchError(this.handleError)

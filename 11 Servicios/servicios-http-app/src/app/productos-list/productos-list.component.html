@@ -1,1 +1,41 @@
 <p>productos-list works!</p>
+<div class="container custom-container-2">
+
+    <!-- Show it when there is no employee -->
+    <div class="no-data text-center" *ngIf="Producto.length == 0">
+        <p>No hay productos registrados!</p>
+        <button class="btn btn-outline-primary" routerLink="/create-employee">Add Empoyee</button>
+    </div>
+
+    <!-- Employees list table, it hides when there is no employee -->
+    <div *ngIf="Producto.length !== 0">
+        <h3 class="mb-3 text-center">Lista de Productos</h3>
+
+        <div class="col-md-12">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Producto Id</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Descripcion</th>
+                        <th scope="col">Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let producto of Producto">
+                        <td>{{producto.id}}</td>
+                        <td>{{producto.nombre}}</td>
+                        <td>{{producto.precio}}</td>
+                        <td>{{producto.descripcion}}</td>
+                        <td>
+                            <span class="edit" routerLink="/editar-producto/{{producto.id}}">Editar</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</div>
