@@ -40,13 +40,21 @@ export class RestApiService {
   }
 
   // HttpClient API put() method => Update producto
-  updateProducto(id: number, producto:any): Observable<Producto> {
+  updateProducto(id: String, producto:any): Observable<Producto> {
     return this.http.put<Producto>(this.apiURL + '/productos/' + id, JSON.stringify(producto), this.httpOptions)
       .pipe(
         retry(1),
         catchError(this.handleError)
       )
   }
+    // HttpClient API delete() method => Delete employee
+    deleteProducto(id:String){
+      return this.http.delete<Producto>(this.apiURL + '/productos/' + id, this.httpOptions)
+      .pipe(
+        retry(1),
+        catchError(this.handleError)
+      )
+    }
 
   handleError(error: any) {
     let errorMessage = '';

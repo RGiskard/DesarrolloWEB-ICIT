@@ -19,5 +19,12 @@ export class ProductosListComponent implements OnInit {
       this.Producto = data;
     })
   }
+  eliminarProducto(id:String) {
+    if (window.confirm('Estás seguro que deseas elimianr?')){
+      this.restApi.deleteProducto(id).subscribe(data => {
+        this.loadProductos()
+      })
+    }
+  } 
 
 }

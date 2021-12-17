@@ -1,1 +1,23 @@
-<p>productos-editar works!</p>
+<div class="container custom-container">
+    <div class="col-md-12">
+
+        <h3 class="mb-3 text-center">Actualizar producto</h3>
+
+        <div class="form-group">
+            <input type="text" [(ngModel)]="productoData.nombre" class="form-control" placeholder="Nombre del producto">
+        </div>
+
+        <div class="form-group">
+            <input type="text" [(ngModel)]="productoData.precio" class="form-control" placeholder="Precio">
+        </div>
+
+        <div class="form-group">
+            <input type="text" [(ngModel)]="productoData.descripcion" class="form-control" placeholder="Descripción">
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-success btn-lg btn-block" (click)="updateProducto()">Actualizar Producto</button>
+        </div>
+
+    </div>
+</div>

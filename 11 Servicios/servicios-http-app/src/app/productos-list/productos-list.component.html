@@ -29,7 +29,8 @@
                         <td>{{producto.precio}}</td>
                         <td>{{producto.descripcion}}</td>
                         <td>
-                            <span class="edit" routerLink="/editar-producto/{{producto.id}}">Editar</span>
+                            <button class="btn btn-success" routerLink="/editar-producto/{{producto.id}}">Editar</button>
+                            <button class="btn btn-danger" (click)="eliminarProducto(producto.id)">Eliminar</button>
                         </td>
                     </tr>
                 </tbody>
